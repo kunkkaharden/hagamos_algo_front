@@ -1,7 +1,7 @@
 <template>
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-    <RouterView> 
-       </RouterView>
+  <RouterView></RouterView>
+  <FooterApp></FooterApp>
 </template>
+<script setup lang="ts">
+import FooterApp from './components/nav/footer/FooterApp.vue';
+</script>

@@ -2,9 +2,9 @@
   <div class="footer-app">
     <InfoApp></InfoApp>
     <hr class="line redes" />
-    <div class="flex">
+    <div class="sm:flex sm:justify-between justify-center">
       <CopyApp></CopyApp>
-      <RedesApp class="absolute right-0"></RedesApp>
+      <RedesApp></RedesApp>
     </div>
   </div>
 </template>

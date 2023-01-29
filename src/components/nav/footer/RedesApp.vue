@@ -1,11 +1,11 @@
 <template>
   <div class="redes-app flex items-center">
-    <p>Síguenos en redes:</p>
+    <p class="hidden sm:inline">Síguenos en redes:</p>
     <div class="redes">
       <a href="https://t.me/HagamosAlgoComunidad"
         ><i class="pi pi-telegram"></i>
       </a>
-      <a href="https://t.me/HagamosAlgoComunidad"
+      <a href="https://www.facebook.com/groups/6347347801961587/?ref=share"
         ><i class="pi pi-facebook"></i>
       </a>
       <a href="https://t.me/HagamosAlgoComunidad"

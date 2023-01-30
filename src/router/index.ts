@@ -11,7 +11,12 @@ const router = createRouter({
     {
       path: '/contactos',
       name: 'contactos',
-      component: () => import('../components/paginas/contactApp.vue'),
+      component: () => import('../components/paginas/ContactApp.vue'),
+    },
+    {
+      path: '/eventos',
+      name: 'eventos',
+      component: () => import('../components/paginas/EventosApp.vue'),
     },
   ],
 });

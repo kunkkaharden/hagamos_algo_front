@@ -1,25 +1,55 @@
 import { ref, computed } from 'vue';
 import { defineStore } from 'pinia';
-import type { IPost } from './post.interface';
-import axios from 'axios';
-export const useEventosStore = defineStore('eventos', () => {
-  const _eventos = ref<IPost[]>([]);
+import type { IPost } from '../interfaces/post.interface';
 
-  const loadData = async () => {
-    if (_eventos.value.length > 0) {
-      return;
-    }
-    try {
-      const { data } = await axios.get<IPost[]>(
-        'http://srv52118-206152.vps.etecsa.cu:3001/api/registro?categoria=EVENTO'
-      );
-      _eventos.value = data;
-    } catch (error) {
-      console.log('get', error);
-    }
+export const useEventosStore = defineStore('eventos', () => {
+  const eventos = ref<IPost[]>([]);
+  const currentPage = ref<number>(1);
+  const total = ref<number>(5);
+  const limit = ref<number>(3);
+  const totalPages = ref<number>(1);
+
+  const setEventos = (_eventos: IPost[]) => {
+    eventos.value = _eventos;
   };
 
-  const eventos = computed(() => _eventos);
-  loadData();
-  return { eventos, loadData };
+  const setPage = (_page: number) => {
+    currentPage.value = _page;
+  };
+
+  const setTotal = (_total: number) => {
+    total.value = _total;
+    totalPages.value = totalPaginas(_total);
+  };
+
+  const setLimit = (_limit: number) => {
+    limit.value = _limit;
+  };
+
+  const totalPaginas = (total: number) => {
+    let paginas = Math.trunc(total / limit.value);
+    if (total % limit.value > 0) {
+      paginas++;
+    }
+    return paginas;
+  };
+  const skip = computed(() => {
+    if (currentPage.value === 1) {
+      return 0;
+    } else {
+      return (currentPage.value - 1) * limit.value;
+    }
+  });
+
+  return {
+    eventos,
+    totalPages,
+    limit,
+    currentPage,
+    skip,
+    setEventos,
+    setPage,
+    setTotal,
+    setLimit,
+  };
 });

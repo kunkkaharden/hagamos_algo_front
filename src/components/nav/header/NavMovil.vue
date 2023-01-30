@@ -59,7 +59,8 @@
               :key="ruta.title"
               :to="ruta.path"
               class="text-base font-medium text-gray-500 hover:text-gray-900"
-              active-class="router-link-active"
+              active-class="isactive"
+              @click="activeMenu"
             >
               {{ ruta.title }}</RouterLink
             >
@@ -101,3 +102,8 @@ const activeMenu = () => {
   emits('update:visible', !props.visible);
 };
 </script>
+<style>
+.isactive {
+  color: #4f46e5 !important;
+}
+</style>

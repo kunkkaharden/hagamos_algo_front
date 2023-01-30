@@ -85,6 +85,6 @@ const activeMenu = () => {
 
 <style>
 .isactive {
-  color: #4f46e5;
+  color: #4f46e5 !important;
 }
 </style>

@@ -30,6 +30,11 @@ export const routesLinks: RouterLink[] = [
     name: 'adoptar',
     title: 'Adoptar',
   },
+  {
+    path: '/eventos',
+    name: 'eventos',
+    title: 'Eventos',
+  },
 ];
 
 export const routesFooter: RouterLink[] = [

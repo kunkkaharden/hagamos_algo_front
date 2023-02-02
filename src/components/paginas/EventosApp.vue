@@ -4,7 +4,7 @@
     <EmptyApp></EmptyApp>
   </template>
   <template v-else>
-    <ListCardApp :publicaciones="eventos" v-if="!isLoading"></ListCardApp>
+    <ListCardApp :publicaciones="eventos"></ListCardApp>
     <PaginationNumbers
       @nav:to="getPage"
       :current-page="currentPage"

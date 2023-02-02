@@ -1,6 +1,8 @@
 <template>
   <HeaderApp></HeaderApp>
-  <RouterView></RouterView>
+  <div class="mt-20">
+    <RouterView></RouterView>
+  </div>
   <FooterApp></FooterApp>
 </template>
 <script setup lang="ts">

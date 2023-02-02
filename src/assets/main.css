@@ -2,3 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 @import "./base.css";
+
+body {
+    background: #e7e6ef !important;
+  }
+
+.text-menu{
+  font-size: 18px !important;
+  line-height: 28px !important;
+  letter-spacing: 1px !important;
+  text-transform: none !important;
+}

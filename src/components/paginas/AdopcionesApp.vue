@@ -1,10 +1,10 @@
 <template>
   <LoadingApp v-if="isLoading"></LoadingApp>
-  <template v-else-if="eventos.length === 0">
+  <template v-else-if="adopciones.length === 0">
     <EmptyApp></EmptyApp>
   </template>
   <template v-else>
-    <ListCardApp :publicaciones="eventos" v-if="!isLoading"></ListCardApp>
+    <ListCardApp :publicaciones="adopciones" v-if="!isLoading"></ListCardApp>
     <PaginationNumbers
       @nav:to="getPage"
       :current-page="currentPage"
@@ -16,10 +16,9 @@
 <script setup lang="ts">
 import ListCardApp from '../list/ListCardApp.vue';
 import PaginationNumbers from '../pagination/PaginationNumbers.vue';
-import { useEventos } from '@/composables/useEventos';
-import LoadingApp from '../LoadingApp.vue';
+import { useAdopciones } from '@/composables/useAdopciones';
 import EmptyApp from '../list/EmptyApp.vue';
-const store = useEventos();
-const { isLoading, currentPage, totalPages, getPage, eventos } = store;
+const store = useAdopciones();
+const { isLoading, currentPage, totalPages, getPage, adopciones } = store;
 </script>
 <style scoped></style>

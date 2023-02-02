@@ -2,15 +2,15 @@ import { ref, computed } from 'vue';
 import { defineStore } from 'pinia';
 import type { IPost } from '../interfaces/post.interface';
 
-export const useEventosStore = defineStore('eventos', () => {
-  const eventos = ref<IPost[]>([]);
+export const useAdopcionesStore = defineStore('adopciones', () => {
+  const adopciones = ref<IPost[]>([]);
   const currentPage = ref<number>(1);
   const total = ref<number>(5);
-  const limit = ref<number>(6);
+  const limit = ref<number>(3);
   const totalPages = ref<number>(1);
 
-  const setEventos = (_eventos: IPost[]) => {
-    eventos.value = _eventos;
+  const setAdopciones = (_post: IPost[]) => {
+    adopciones.value = _post;
   };
 
   const setPage = (_page: number) => {
@@ -44,12 +44,12 @@ export const useEventosStore = defineStore('eventos', () => {
   });
 
   return {
-    eventos,
+    adopciones,
     totalPages,
     limit,
     currentPage,
     skip,
-    setEventos,
+    setAdopciones,
     setPage,
     setTotal,
     setLimit,

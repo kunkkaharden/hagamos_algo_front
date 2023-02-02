@@ -18,6 +18,21 @@ const router = createRouter({
       name: 'eventos',
       component: () => import('../components/paginas/EventosApp.vue'),
     },
+    {
+      path: '/adoptar',
+      name: 'adoptar',
+      component: () => import('../components/paginas/AdopcionesApp.vue'),
+    },
+    {
+      path: '/post',
+      name: 'posy',
+      component: () => import('../components/paginas/PostApp.vue'),
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'not-found',
+      component: () => import('../components/paginas/NotFoundApp.vue'),
+    },
   ],
 });
 

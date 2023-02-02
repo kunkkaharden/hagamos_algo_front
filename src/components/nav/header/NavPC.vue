@@ -1,7 +1,7 @@
 <template>
-  <div class="mx-auto max-w-7xl px-6">
+  <div class="px-6 fixed w-full top-0 bg-[#584afa] z-[1]">
     <div
-      class="flex items-center justify-between border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10"
+      class="flex items-center justify-between py-6 md:justify-start md:space-x-10"
     >
       <div class="flex justify-start lg:w-0 lg:flex-1">
         <a href="#">
@@ -16,7 +16,7 @@
       <div class="-my-2 -mr-2 md:hidden">
         <button
           type="button"
-          class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+          class="inline-flex items-center justify-center rounded-md p-2 text-[#e2e1e1] hover:bg-[#4639cf] shadow-lg focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
           aria-expanded="false"
           @click="activeMenu"
         >
@@ -44,14 +44,15 @@
           v-for="ruta in routes"
           :key="ruta.title"
           :to="ruta.path"
-          class="text-base font-medium text-gray-500 hover:text-gray-900"
+          class="text-menu font-sans font-semibold text-[#c8c5ff] hover:text-white"
           active-class="isactive"
         >
           {{ ruta.title }}</RouterLink
         >
         <a
           href="https://bacuba.org/donate/"
-          class="text-base font-medium text-gray-500 hover:text-gray-900"
+          target="_blank"
+          class="text-menu font-sans font-semibold text-[#c8c5ff] hover:text-white"
           >Donar</a
         >
       </nav>
@@ -85,6 +86,10 @@ const activeMenu = () => {
 
 <style>
 .isactive {
-  color: #4f46e5 !important;
+  color: #ffffff !important;
+}
+.flotante {
+  position: fixed;
+  z-index: 1;
 }
 </style>

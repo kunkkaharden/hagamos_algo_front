@@ -13,7 +13,7 @@
         <i class="pi pi-telegram"></i>
       </div>
     </div> -->
-    <div class="slide relative" :class="{hidden: !visible}">
+    <div class="slide relative" :class="{ hidden: !visible }">
       <img class="w-full h-[300px] object-cover" :src="image.image" />
       <div
         class="absolute bottom-0 w-full px-5 py-3 bg-black/40 text-center text-white"

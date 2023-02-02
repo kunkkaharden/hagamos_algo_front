@@ -11,22 +11,7 @@ export const routesLinks: RouterLink[] = [
     title: 'Inicio',
   },
   {
-    path: '/',
-    name: 'somos',
-    title: 'Sobre nosotros',
-  },
-  {
-    path: '/',
-    name: 'apoyar',
-    title: 'Colaborar',
-  },
-  {
-    path: '/contactos',
-    name: 'contactos',
-    title: 'Contactos',
-  },
-  {
-    path: '/',
+    path: '/adoptar',
     name: 'adoptar',
     title: 'Adoptar',
   },
@@ -35,27 +20,32 @@ export const routesLinks: RouterLink[] = [
     name: 'eventos',
     title: 'Eventos',
   },
-];
-
-export const routesFooter: RouterLink[] = [
-  {
-    path: '/',
-    name: 'somos',
-    title: 'Sobre nosotros',
-  },
-  {
-    path: '/',
-    name: 'apoyar',
-    title: 'Colaborar',
-  },
   {
     path: '/contactos',
     name: 'contactos',
     title: 'Contactos',
   },
+];
+
+export const routesFooter: RouterLink[] = [
   {
     path: '/',
+    name: 'home',
+    title: 'Inicio',
+  },
+  {
+    path: '/adoptar',
     name: 'adoptar',
     title: 'Adoptar',
+  },
+  {
+    path: '/eventos',
+    name: 'eventos',
+    title: 'Eventos',
+  },
+  {
+    path: '/contactos',
+    name: 'contactos',
+    title: 'Contactos',
   },
 ];

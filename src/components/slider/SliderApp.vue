@@ -8,7 +8,7 @@
   <h2 class="text-center text-xl">Eventos</h2>
 
   <!-- Implement the carousel -->
-  <div class="relative w-[600px] mx-auto">
+  <div class="relative w-full mx-auto">
     <SliderItem
       v-for="(evento, i) in eventos"
       :evento="evento"
@@ -39,12 +39,13 @@
 </template>
 <script setup lang="ts">
 import { useEventos } from '@/composables/useEventos';
-import { ref } from 'vue';
+import { onMounted, onUnmounted, ref } from 'vue';
 import PaginationNumbers from '../pagination/PaginationNumbers.vue';
 import SliderItem from './SliderItem.vue';
 const store = useEventos();
 const { isLoading, eventos } = store;
 const index = ref(1);
+const intervalId = ref<number>();
 const mover = (i: number) => {
   if (index.value + i < 1) {
     index.value = eventos.value.length;
@@ -57,11 +58,16 @@ const mover = (i: number) => {
 
 const navTo = (i: number) => {
   index.value = i;
-} 
+};
+
+onMounted(() => {
+  intervalId.value = setInterval(() => {
+    mover(1);
+  }, 1000 * 60);
+});
+
+onUnmounted(() => {
+  clearInterval(intervalId.value);
+});
 </script>
-<style>
-img {
-  /* max-width: 600px; */
-  /* width: 50%; */
-}
-</style>
+

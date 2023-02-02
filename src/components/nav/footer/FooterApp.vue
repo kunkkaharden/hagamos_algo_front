@@ -2,8 +2,8 @@
   <div class="footer-app">
     <InfoApp></InfoApp>
     <hr class="line redes" />
-    <div class="sm:flex sm:justify-between justify-center">
-      <CopyApp></CopyApp>
+    <div class="flex sm:flex-row flex-col sm:justify-between p-5">
+      <CopyApp class="order-last sm:order-first pt-5 sm:pt-0"></CopyApp>
       <RedesApp></RedesApp>
     </div>
   </div>

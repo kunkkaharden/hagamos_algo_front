@@ -10,7 +10,7 @@
         To: "opacity-0 scale-95"
     -->
   <div
-    class="absolute inset-x-0 top-0 origin-top-right transform p-2 transition md:hidden"
+    class="fixed inset-x-0 top-0 origin-top-right transform p-2 transition md:hidden z-[2]"
     v-if="visible"
   >
     <div
@@ -58,7 +58,7 @@
               v-for="ruta in routes"
               :key="ruta.title"
               :to="ruta.path"
-              class="text-base font-medium text-gray-500 hover:text-gray-900"
+              class="text-menu font-sans font-semibold text-gray-500 hover:text-gray-900"
               active-class="isactive"
               @click="activeMenu"
             >
@@ -67,7 +67,8 @@
 
             <a
               href="https://bacuba.org/donate/"
-              class="text-base font-medium text-gray-500 hover:text-gray-900"
+              target="_blank"
+              class="text-menu font-sans font-semibold text-gray-500 hover:text-gray-900"
               >Donar</a
             >
           </nav>
@@ -102,7 +103,7 @@ const activeMenu = () => {
   emits('update:visible', !props.visible);
 };
 </script>
-<style>
+<style scoped>
 .isactive {
   color: #4f46e5 !important;
 }

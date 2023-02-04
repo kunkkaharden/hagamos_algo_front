@@ -5,8 +5,8 @@ import type { IPost } from '../interfaces/post.interface';
 export const useAdopcionesStore = defineStore('adopciones', () => {
   const adopciones = ref<IPost[]>([]);
   const currentPage = ref<number>(1);
-  const total = ref<number>(5);
-  const limit = ref<number>(3);
+  const total = ref<number>(1);
+  const limit = ref<number>(6);
   const totalPages = ref<number>(1);
 
   const setAdopciones = (_post: IPost[]) => {

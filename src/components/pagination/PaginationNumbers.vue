@@ -1,5 +1,8 @@
 <template>
-  <div class="flex items-center justify-between px-4 py-3 sm:px-6">
+  <div
+    class="flex items-center justify-between px-4 py-3 sm:px-6"
+    v-if="totalPages > 0"
+  >
     <div class="flex flex-1 justify-between sm:hidden">
       <button
         @click="getPage(currentPage - 1)"

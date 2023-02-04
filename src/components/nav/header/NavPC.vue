@@ -1,16 +1,12 @@
 <template>
-  <div class="px-6 fixed w-full top-0 bg-[#584afa] z-[1]">
+  <div class="px-8 fixed w-full top-0 bg-[#584afa] z-[1]">
     <div
-      class="flex items-center justify-between py-6 md:justify-start md:space-x-10"
+      class="flex items-center justify-between py-4 md:justify-start md:space-x-10"
     >
       <div class="flex justify-start lg:w-0 lg:flex-1">
         <a href="#">
-          <span class="sr-only">Your Company</span>
-          <img
-            class="h-8 w-auto sm:h-10"
-            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-            alt=""
-          />
+          <span class="sr-only">Hagamos Algo</span>
+          <LogoApp color="#e7e6ef" size="50"></LogoApp>
         </a>
       </div>
       <div class="-my-2 -mr-2 md:hidden">
@@ -49,12 +45,6 @@
         >
           {{ ruta.title }}</RouterLink
         >
-        <a
-          href="https://bacuba.org/donate/"
-          target="_blank"
-          class="text-menu font-sans font-semibold text-[#c8c5ff] hover:text-white"
-          >Donar</a
-        >
       </nav>
       <!-- <div class="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
         <a
@@ -72,6 +62,7 @@
   </div>
 </template>
 <script setup lang="ts">
+import LogoApp from '@/components/LogoApp.vue';
 import type { RouterLink } from '@/router/link-routes';
 
 const props = defineProps<{ visible: Boolean; routes: RouterLink[] }>();

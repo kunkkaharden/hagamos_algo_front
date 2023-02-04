@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <SecccionApp
-      title="Animales en Adopción"
+      title="Animales en adopción"
       :posts="adopciones"
       to="/adoptar"
       :is-loading="loading_adopciones"

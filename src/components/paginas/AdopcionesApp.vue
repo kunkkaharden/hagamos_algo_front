@@ -5,19 +5,20 @@
   </template>
   <template v-else>
     <ListCardApp :publicaciones="adopciones"></ListCardApp>
-    <PaginationNumbers
-      @nav:to="getPage"
-      :current-page="currentPage"
-      :total-pages="totalPages"
-    >
-    </PaginationNumbers>
   </template>
+  <PaginationNumbers
+    @nav:to="getPage"
+    :current-page="currentPage"
+    :total-pages="totalPages"
+  >
+  </PaginationNumbers>
 </template>
 <script setup lang="ts">
 import ListCardApp from '../list/ListCardApp.vue';
 import PaginationNumbers from '../pagination/PaginationNumbers.vue';
 import { useAdopciones } from '@/composables/useAdopciones';
 import EmptyApp from '../list/EmptyApp.vue';
+import LoadingApp from '../LoadingApp.vue';
 const store = useAdopciones();
 const { isLoading, currentPage, totalPages, getPage, adopciones } = store;
 </script>

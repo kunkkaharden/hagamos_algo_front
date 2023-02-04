@@ -20,11 +20,6 @@ export const routesLinks: RouterLink[] = [
     name: 'eventos',
     title: 'Eventos',
   },
-  {
-    path: '/contactos',
-    name: 'contactos',
-    title: 'Contactos',
-  },
 ];
 
 export const routesFooter: RouterLink[] = [
@@ -42,10 +37,5 @@ export const routesFooter: RouterLink[] = [
     path: '/eventos',
     name: 'eventos',
     title: 'Eventos',
-  },
-  {
-    path: '/contactos',
-    name: 'contactos',
-    title: 'Contactos',
   },
 ];

@@ -2,7 +2,10 @@
   <div class="grid sm:grid-cols-2 p-5">
     <div class="flex justify-center"></div>
     <div class="flex justify-center">
-      <div class="grid sm:grid-cols-2">
+      <div
+        class="grid"
+        :class="routesFooter.length > 3 && 'grid sm:grid-cols-2'"
+      >
         <RouterLink
           v-for="ruta in routesFooter"
           :key="ruta.title"

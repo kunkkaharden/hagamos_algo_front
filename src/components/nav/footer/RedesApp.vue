@@ -1,5 +1,5 @@
 <template>
-  <div class="redes-app flex items-center justify-center">
+  <div class="flex items-center justify-center">
     <p class="hidden sm:inline text-[#a4a4be] text-menu font-sans">
       Síguenos en redes:
     </p>
@@ -8,7 +8,7 @@
         ><i class="pi pi-telegram"></i>
       </a>
       <a href="https://www.facebook.com/groups/6347347801961587/?ref=share"
-        ><i class="pi pi-facebook"></i>
+        ><i class="pi pi-facebook ml-2"></i>
       </a>
       <!-- <a href="https://t.me/HagamosAlgoComunidad"
         ><i class="pi pi-instagram"></i>
@@ -19,7 +19,6 @@
 <style>
 .redes i {
   font-size: 1.5rem;
-  margin-left: 1rem;
   color: #6b7280;
 }
 </style>

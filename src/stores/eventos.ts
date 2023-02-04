@@ -5,7 +5,7 @@ import type { IPost } from '../interfaces/post.interface';
 export const useEventosStore = defineStore('eventos', () => {
   const eventos = ref<IPost[]>([]);
   const currentPage = ref<number>(1);
-  const total = ref<number>(5);
+  const total = ref<number>(1);
   const limit = ref<number>(6);
   const totalPages = ref<number>(1);
 

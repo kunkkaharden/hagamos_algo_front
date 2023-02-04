@@ -5,13 +5,13 @@
   </template>
   <template v-else>
     <ListCardApp :publicaciones="eventos"></ListCardApp>
-    <PaginationNumbers
-      @nav:to="getPage"
-      :current-page="currentPage"
-      :total-pages="totalPages"
-    >
-    </PaginationNumbers>
   </template>
+  <PaginationNumbers
+    @nav:to="getPage"
+    :current-page="currentPage"
+    :total-pages="totalPages"
+  >
+  </PaginationNumbers>
 </template>
 <script setup lang="ts">
 import ListCardApp from '../list/ListCardApp.vue';

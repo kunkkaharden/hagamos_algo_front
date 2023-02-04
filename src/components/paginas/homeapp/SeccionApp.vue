@@ -1,6 +1,8 @@
 <template>
   <div class="flex flex-col pb-5 pt-10">
-    <h2 class="text-[#584afa] text-2xl font-sans font-semibold text-center">
+    <h2
+      class="text-[#584afa] text-2xl font-sans font-semibold text-center mx-5"
+    >
       {{ title }}
     </h2>
     <LoadingApp v-if="isLoading">cargando...</LoadingApp>
@@ -9,7 +11,7 @@
       <RouterLink
         :to="to"
         class="text-menu text-[#584afa] text-2xl font-sans font-semibold text-center"
-        >Ver mas...</RouterLink
+        >Ver más...</RouterLink
       >
     </template>
   </div>

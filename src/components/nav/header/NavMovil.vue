@@ -19,11 +19,7 @@
       <div class="px-5 pt-5 pb-6">
         <div class="flex items-center justify-between">
           <div>
-            <img
-              class="h-8 w-auto"
-              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-              alt="Your Company"
-            />
+            <LogoApp color="#584afa" size="50"></LogoApp>
           </div>
           <div class="-mr-2">
             <button
@@ -64,13 +60,6 @@
             >
               {{ ruta.title }}</RouterLink
             >
-
-            <a
-              href="https://bacuba.org/donate/"
-              target="_blank"
-              class="text-menu font-sans font-semibold text-gray-500 hover:text-gray-900"
-              >Donar</a
-            >
           </nav>
         </div>
       </div>
@@ -93,6 +82,7 @@
   </div>
 </template>
 <script setup lang="ts">
+import LogoApp from '@/components/LogoApp.vue';
 import type { RouterLink } from '@/router/link-routes';
 const props = defineProps<{ visible: Boolean; routes: RouterLink[] }>();
 const emits = defineEmits<{
